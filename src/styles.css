@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, rgb(10 10 10), rgb(0 106 155), rgb(0 0 0));
+    color: #fff;
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+}
+
+textarea::-webkit-scrollbar,body::-webkit-scrollbar {
+    background: rgb(10, 77, 49);
+    border-radius: 4px;
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb {
+    background: rgb(20, 133, 26);
+    border-radius: 4px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+/* login register*/
+
+
+.form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(10 10 10), rgb(0 106 155), rgb(0 0 0));
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+input::placeholder{
+    color: rgb(42, 40, 40);
+}
+
+.form-container form{
+    height: 37rem;
+    width: 23rem;
+    background-color: rgba(255,255,255,.1);
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    border-bottom: 1px solid rgba(255, 255, 255);
+    transform-style: preserve-3d ;
+
+}
+
+.form-container form h3{
+    transform-style: preserve-3d ;
+    font-size: 30px;
+    padding: 25px 0;
+    color: #ccc;
+    letter-spacing: 3px;
+}
+
+.form-container form i{
+    padding: 0.5px;
+    font-size: 20px;
+    color: #bbb;
+}
+
+.form-container form input{
+    width: 82%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    outline: none;
+    margin: 15px 0;
+    background: rgba(0,0,0,.1);
+    color: rgba(255,255,255,.7);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.form-container form input[type="submit"]{
+   cursor: pointer;
+   background: linear-gradient(90deg, rgb(5, 87, 93), rgb(21, 131, 85));
+   margin-top: 30px;
+   border-radius: 50px;
+   transition: all .5s;
+}
+.form-container form input[type="submit"]:hover{
+    letter-spacing: 3px;
+}
+
+.form-container .login{
+    margin: 2rem;
+    width: 23rem;
+    height: 30rem;
+    padding: auto;
+    border-top-left-radius: 5rem;
+}
+i::before{
+ 
+    margin: 5px;
+}
+.text-danger{
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+.is-invalid{
+    border-top: 2px solid rgb(255, 0, 0);
+    box-shadow: inset 0px 0px 10px 0px rgb(167, 34, 34);
+    font-weight: bold;
+}
+.is-valid{
+    box-shadow: inset 0px 0px 10px 0px rgb(34, 167, 34);
+    border-top: 2px solid rgb(0, 255, 85);
+}
+
+
+input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+
+
+/*fin*/
+
+
+

@@ -1,0 +1,28 @@
+<header>
+    <div class="logo_ap"(click)="cambiarLogo($event)" >
+        <img [src]="logo" class="logo_ap" alt="logo"  > 
+    </div>
+   
+   
+          <div class="baner" *ngFor="let item of baner" >
+        
+              <img [src]="item.img" alt="">
+              <div class="divEdit">
+                <button type="button"class="banerEdit btn"><i class="far fa-edit "></i></button>
+
+              </div>
+
+              <app-about-for-my></app-about-for-my>
+
+              <div class="logout-div">
+                <button class="logout" type="submit" (click)="Logout()">Logout</button>
+               
+              </div>
+            
+  
+          </div>
+       
+     
+       
+</header>
+

@@ -1,0 +1,78 @@
+
+<div class="form-container">
+    
+    <form [formGroup]="formRegistro" (ngSubmit)="registroAndLogin()"
+    [ngClass]="{'is-invalid':  Nombre?.errors && Nombre?.touched || PasswordRegistro?.errors && PasswordRegistro?.touched || NombreUsuario?.errors && NombreUsuario?.touched || Email?.errors && Email?.touched  , 'is-valid':!PasswordRegistro?.errors && PasswordRegistro?.touched && !Nombre?.errors && Nombre?.touched && !NombreUsuario?.errors && NombreUsuario?.touched && !Email?.errors && Email?.touched}">
+        <h3>Registro</h3>
+
+        <div class="container">
+            <span class="icon"><i class="fa fa-user"></i></span>
+            <input type="text" placeholder="nombre" formControlName="nombre"
+            [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid':!Nombre?.errors && Nombre?.touched  }">
+
+            <div *ngIf="Nombre?.errors && Nombre?.touched">
+                <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                    El usuario es requerido.
+                </p>
+                <p *ngIf="Nombre?.errors?.['minlength']" class="text-danger">
+                    El usuario debe tener al menos 3 caracteres.
+                </p>
+            </div>
+        </div>   
+
+
+        <div class="container">
+            <span class="icon"><i class="fa fa-user"></i></span>
+            <input type="text" placeholder="Usuario" formControlName="nombreUsuario"
+            [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid':!NombreUsuario?.errors && NombreUsuario?.touched  }">
+
+            <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+                <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
+                    El usuario es requerido.
+                </p>
+                <p *ngIf="NombreUsuario?.errors?.['minlength']" class="text-danger">
+                    El usuario debe tener al menos 3 caracteres.
+                </p>
+            </div>
+
+
+        </div>
+
+        <div class="container">
+            <span class="icon"><i class="fas fa-at"></i></span>
+            <input type="text" placeholder="Correo Electrónico" formControlName="email"
+            [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid':!Email?.errors && Email?.touched  }">
+
+            <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
+                    El correo es requerido.
+                </p>
+                <p *ngIf="Email?.errors?.['email']" class="text-danger">
+                    El correo no es válido.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <span class="icon"><i class="fa fa-lock"></i></span>
+            <input type="password" placeholder="Contraseña" formControlName="password"
+            [ngClass]="{'is-invalid': PasswordRegistro?.errors && PasswordRegistro?.touched, 'is-valid':!PasswordRegistro?.errors && PasswordRegistro?.touched  }">
+
+            <div *ngIf="PasswordRegistro?.errors && PasswordRegistro?.touched">
+                <p *ngIf="PasswordRegistro?.hasError('required')" class="text-danger">
+                    La contraseña es requerida.
+                </p>
+                <p *ngIf="PasswordRegistro?.errors?.['minlength']" class="text-danger">
+                    La contraseña debe tener al menos 6 caracteres.
+                </p>
+            </div>
+
+        </div>   
+
+        <input type="submit" value="Regístrate">
+        <p>{{mensaje}}</p>
+        <input class="registrar" type="button" value="Login" routerLink="../login">
+    </form>
+   
+</div>
